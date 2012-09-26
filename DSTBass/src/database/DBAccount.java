@@ -9,10 +9,10 @@ import net.roseindia.form.Account;
 public class DBAccount extends DBActionSupport{
 	public Account login(String username, String password) {
 		initializeConnection();
-
+		// Just test
 		PreparedStatement pstmt = null;
 		Account account = null;
-		String cmd = "SELECT firstName, lastName, type FROM account WHERE username = ? AND password = ? ";
+		String cmd = "SELECT firstName, lastName, type FROM account WHERE username = ? AND password = ?";
 		
 		try {
 			pstmt = con.prepareStatement(cmd);
